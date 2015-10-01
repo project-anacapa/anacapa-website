@@ -7,7 +7,6 @@ addons:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
-  - bundle exec rake teaspoon
   - bundle exec rake spec
 before_script:
   - psql -c 'create database pa_website_test_db;' -U postgres
